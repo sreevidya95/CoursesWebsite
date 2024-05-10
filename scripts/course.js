@@ -11,6 +11,11 @@ window.addEventListener('load',async function loadCourse(){
             let col2=row.insertCell(1);
             let col3=row.insertCell(2);
             col1.innerHTML=data[i].dept;
+            let col4 = row.insertCell(3);
+            let anchor=document.createElement("a");
+            anchor.href=`details.htm+cid=${data[i].id}`;
+            anchor.text="see details";
+            col4.appendChild(anchor);
             console.log(data[i].courseNum);
             col2.innerHTML=data[i].courseNum;
             col3.innerHTML=data[i].courseName;
