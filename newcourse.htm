@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="scripts/addUser.js"></script>
+    </head>
+    <body>
+       <form id="form1">
+        <fieldset>
+            <legend>Add Course</legend>
+            <input id="dept" placeholder="Enter Department" type="text" required name="dept" pattern="/^[a-zA-Z ]*$/"><br><br>
+            <input id="courseNum" placeholder="Enter course Number" type="text" name="courseNum" pattern ="\d+" required><br><br>
+            <input id="courseName" placeholder="Enter Course Name" type="test"  name="courseName" required><br><br>
+            <input id="instructor" placeholder="enter instructor Name"  name="instructor" pattern="/^[a-zA-Z ]*$/" type="test" required><br><br>
+            <input id="startDate" type="Date" placeholder="Enter Date"  name = "startDate" required><br><br>
+            <input type="number" id="nod" placeholder="Enter Number of Days"required name="nod"><br><br>
+            <input type="button" value="Add User" id="submit">
+        </fieldset>
+       </form>
+        
+    </body>
+</html>

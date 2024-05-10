@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        window.onload=function(){
+            let param = new URLSearchParams(location.search);
+            let cid=-1;
+            
+            if(param.has('cid')===true){
+                console.log(param.get('cid'));
+                cid=param.get('cid');
+                deleteUser(cid);
+            }
+        }
+
+        function deleteUser(cid){
+           fetch('http://localhost:8081/api/courses/'+cid,{
+            method:"DELETE",
+        }).then(response=>{
+            if(response.status==200){
+                alert("deleted successfully");
+                window.location.href="index.htm"
+            }
+           }).catch(error=>alert(error.message));
+        }
+    </script>
+</head>
+<body></body>
+</html>

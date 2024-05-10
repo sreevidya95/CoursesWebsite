@@ -16,6 +16,11 @@ window.addEventListener('load',async function loadCourse(){
             anchor.href=`details.htm?cid=${data[i].id}`;
             anchor.text="see details";
             col4.appendChild(anchor);
+            let col5=row.insertCell(4);
+            let a=document.createElement("a");
+            a.href=`confirm-delete.html?cid=${data[i].id}`;
+            a.text="delete";
+            col5.appendChild(a);
             console.log(data[i].courseNum);
             col2.innerHTML=data[i].courseNum;
             col3.innerHTML=data[i].courseName;
